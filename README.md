@@ -16,13 +16,13 @@ _mysql -u root -p_
 
 _create database simple_shiro_web_app;_  
 
-_grant all privileges on simple_shiro_web_app.* to 'root'@'localhost';_  
+_grant all privileges on simple_shiro_web_app.* to 'root'@'localhost' identified by '123qwe';_
 
 _flush privileges;_
 
 Now, populate the database with the script provided:  
 
-_mysql -u root -p simple_shiro_web_app < pop_db.sql_
+_mysql -u root -p123qwe simple_shiro_web_app < pop_db.sql_
 
 ## Build WAR and deploy to Glassfish ##
 
