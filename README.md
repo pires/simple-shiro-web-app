@@ -34,4 +34,4 @@ Then, deploy the resulting _target/simple-shiro-web-app-0.1.war_ to your Glassfi
 
 ## Test ##
 
-Point your browser to _http://localhost/simple-shiro-web-app-0.1/_
+Point your browser to _http://localhost/web-app-0.1/_
