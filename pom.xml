@@ -158,6 +158,7 @@
                     <extended>false</extended>
                     <logTimeZone>GMT</logTimeZone>
                 </requestLog>
+	            <jettyEnvXml>${project.basedir}/src/test/jetty/jetty-env.xml</jettyEnvXml>
             </configuration>
         </plugin>
     </plugins>
