@@ -8,3 +8,8 @@
 # Temporary Folders #
 gen
 target
+
+# Eclipse stuff #
+.settings
+.project
+.classpath
