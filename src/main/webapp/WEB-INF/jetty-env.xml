@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+  <New id="myDS" class="org.eclipse.jetty.plus.jndi.Resource">
+    <Arg>jdbc/myDS</Arg>
+    <Arg>
+      <New class="com.jolbox.bonecp.BoneCPDataSource">
+        <Set name="driverClass">com.mysql.jdbc.Driver</Set>
+        <Set name="jdbcUrl">jdbc:mysql://localhost:3306/simple_shiro_web_app</Set>
+        <Set name="username">root</Set>
+        <Set name="password">123qwe</Set>
+      </New>
+    </Arg>
+  </New>
+</Configure>
