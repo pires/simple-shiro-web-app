@@ -10,11 +10,11 @@ drop table if exists simple_shiro_web_app.USERS;
 drop table if exists simple_shiro_web_app.USERS_ROLES;
 create table simple_shiro_web_app.PERMISSIONS (name varchar(30) not null, description varchar(255), primary key (name));
 create table simple_shiro_web_app.ROLES (name varchar(20) not null, description varchar(255), primary key (name));
-create table simple_shiro_web_app.ROLES_PERMISSIONS (role_name varchar(20) not null, permission_name varchar(30) not null);
+create table simple_shiro_web_app.ROLES_PERMISSIONS (role_name varchar(20) not null, permission varchar(30) not null);
 create table simple_shiro_web_app.USERS (username varchar(15) not null, email varchar(100), name varchar(65), password varchar(255) not null, primary key (username));
 create table simple_shiro_web_app.USERS_ROLES (username varchar(15) not null, role_name varchar(20) not null);
 alter table simple_shiro_web_app.ROLES_PERMISSIONS add index RP_1 (role_name), add constraint RP_1 foreign key (role_name) references simple_shiro_web_app.ROLES (name);
-alter table simple_shiro_web_app.ROLES_PERMISSIONS add index RP_2 (permission_name), add constraint RP_2 foreign key (permission_name) references simple_shiro_web_app.PERMISSIONS (name);
+alter table simple_shiro_web_app.ROLES_PERMISSIONS add index RP_2 (permission), add constraint RP_2 foreign key (permission) references simple_shiro_web_app.PERMISSIONS (name);
 alter table simple_shiro_web_app.USERS_ROLES add index UR_1 (username), add constraint UR_1 foreign key (username) references simple_shiro_web_app.USERS (username);
 alter table simple_shiro_web_app.USERS_ROLES add index UR_2 (role_name), add constraint UR_2 foreign key (role_name) references simple_shiro_web_app.ROLES (name);
 
